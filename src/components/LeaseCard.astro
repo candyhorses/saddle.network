@@ -1,0 +1,12 @@
+---
+const { cidr, price, description, promotion } = Astro.props;
+---
+<div class="text-gray-400 mb-12 relative flex justify-between">
+  <div class="flex leasecolor inter-regular items-start p-3 rounded-md flex-1">
+    <div class="text-3xl">{cidr}</div>
+    <span class="ml-auto inter-regular text-md text-right">{description.join(' • ')}</span>
+  </div>
+  <div class={`price-tab inter-regular text-right text-gray-400 py-2 px-2 rounded-md ${promotion ? 'bg-gold' : 'pricecolor'}`}>
+    <div class="text-sm font-bold">{price}</div>
+  </div>
+</div>

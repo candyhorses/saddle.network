@@ -1,0 +1,82 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  background-color: #27272c;
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.price-tab {
+    position: absolute;
+    z-index: 1;
+    bottom: -29px;
+    right: 10px;
+}
+
+.notice {
+    position: relative;
+    z-index: 1;
+    left: -32px;
+    top: 20px;
+    background: rgb(54,69,44);
+    background: linear-gradient(304deg, rgba(54,69,44,1) 0%, rgba(76,97,66,1) 29%, rgba(42,63,41,1) 100%);
+}
+
+.leasecolor {
+    background: linear-gradient(to right, #40415F, #484A72 71%, #41425F);
+    z-index: 3;
+}
+
+.pricecolor {
+    background-color: #38384e;
+}
+
+.bg-gold {
+    background-color: #755f34;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.istok-web-regular {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .istok-web-bold {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .istok-web-regular-italic {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .istok-web-bold-italic {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  

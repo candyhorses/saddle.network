@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeaseCard from '../components/LeaseCard.astro';
+import '../styles/global.css';
+
+const leases = [
+  {
+    cidr: '1.0.10.0/24',
+    price: '$15/mo $153/yr (-15%)',
+    description: ['Recent History on Ledger', 'No Blacklist'],
+    promotion: null,
+  },
+  {
+    cidr: '1.0.11.0/24',
+    price: '$10/mo $90/yr (-25%)',
+    description: ['No History Available', 'No Blacklist'],
+    promotion: 'PROMOTION PRICING',
+  },
+  {
+    cidr: '1.0.12.0/22',
+    price: '$15/mo $153/yr (-23%)',
+    description: ['Recent History on Ledger', 'No Blacklist'],
+    promotion: null,
+  },
+  {
+    cidr: '2.16.0.0/16',
+    price: '$15/mo $153/yr (-23%)',
+    description: ['Recent History on Ledger', 'No Blacklist'],
+    promotion: null,
+  },
+];
+---
+<BaseLayout>
+  <div class="p-8 relative">
+    <h1 class="text-4xl istok-web-regular text-gray-400 mb-4 pl-4">
+      <span class="text-blue-900">saddle</span> networks <span class="text-green-400">xenia</span>
+    </h1>
+    <p class="absolute top-10 right-10 text-md text-gray-400">
+      With every range, we can provide:
+    </p>
+    <div class="absolute top-14 right-10 text-md text-white flex flex-wrap max-w-[500px]">
+      <p class="mr-6">Full Reassignment</p>
+      <p class="mr-6">RPKI</p>
+      <p class="mr-6">IRR</p>
+      <p class="mr-6">LOA</p>
+      <p class="">rDNS</p>
+    </div>
+	<p class="absolute top-20 right-10 text-md text-gray-400">
+		Recommended hosted prefix providers:
+	</p>
+	 <div class="absolute top-24 right-10 text-md text-white flex flex-wrap max-w-[500px]">
+		<p class="">saddle.xen</p>
+	</div>
+	<p class="absolute top-32 right-10 text-md text-gray-200 font-bold underline">
+		<a href="">Looking for ICANN-net ranges?</a>
+	</p>
+	<p class="absolute top-40 right-10 text-md font-bold underline text-gray-400">
+		<a href="">What do these mean?</a>
+	</p>
+    <div class="notice relative z-1 pl-4 pr-4 pb-2 pt-2 mb-4 rounded-tr-md rounded-br-md bg-green-600 text-gray-400 w-[725px]">
+      <div class="flex justify-between items-start">
+        <h1 class="text-4xl istok-web-regular">Adopt, don’t shop!</h1>
+        <p class="ml-4 text-right">
+          Xenia is still very empty!
+          <br/>It’s recommended you request your own range 
+          <a href="https://xna.xenia/" class="text-indigo-500 font-bold">here</a>.
+        </p>
+      </div>
+    </div>
+    <div class="mt-10">
+		{leases.map((lease) => (
+			<LeaseCard {...lease} />
+		  ))}
+	</div>
+  </div>
+</BaseLayout>
