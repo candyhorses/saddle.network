@@ -1,35 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
-
+import NewsItem from '../components/NewsItem.astro';
+import Logo from '../components/Logo.astro';
+import RightMenu from '../components/RightMenu.astro';
+const news = [
+  {
+    title: 'Hello World!',
+    date: 'Friday, July 12th, 2024',
+    description: 'Saddle Networks would like to introduce itself as the latest subsidiary in the family of Candy Horses Co-Op ventures. We\'re excited to bring our offerings to market and help clients both large and small in finding the right infrastructure and resources for their projects.',
+  },
+  {
+    title: 'Recruiting co-op members!',
+    date: 'Tuesday, November 5th, 2024',
+    description: 'Candy Horses is looking for exciting people to join our co-op and help us grow our family of ventures! If you have skills that you think would benefit any of our current subsidiaries or could benefit a future one, shoot us an application and lets get talking! For more details, please checkout the call to action in the top-right of our page.',
+  },
+];
 ---
+
 <BaseLayout>
-  <div class="p-8 relative">
-    <h1 class="text-4xl istok-web-regular text-gray-400 mb-4 pl-4">
-      <span class="text-blue-900">saddle</span> networks
-    </h1>
-    <p class="absolute top-10 right-10 text-md text-gray-400">
-      With every range, we can provide:
-    </p>
-    <div class="absolute top-14 right-10 text-md text-gray-300 flex flex-wrap max-w-[500px]" style="justify-content: flex-end;">
-      <p class="mr-6">Hosted Prefixes</p>
-      <p class="mr-6">Dedicated</p>
-      <p class="mr-6">VPS</p>
-      <p class="mr-6">Transit</p>
-      <p class="">IP Leasing</p>
-      <p class="">Colocation</p>
+  <div class="p-8 mr-0 ml-0 md:mr-8 md:ml-8 sm:mr-4 sm:ml-4 lg:mr-24 lg:ml-24 relative">
+    <Logo />
+    <div class="text-right md:absolute top-10 right-10">
+      <RightMenu />
     </div>
-    
-	  <p class="absolute top-28 right-10 text-md text-gray-400">
-		  Products we develop:
-	  </p>
-	  <div class="absolute top-32 right-10 text-md text-white flex flex-wrap max-w-[500px]">
-		  <p class="mr-6">Xenia Net</p>
-      <p class="mr-6">Saddle Linux</p>
-      <p class="">homeOS</p>
-	  </div>
-	  <p class="absolute top-40 right-10 text-md text-gray-200 font-bold underline">
-		  <a href="">Candy Horses is recruiting co-op members!</a>
-	  </p>
+    <div class="flex text-pretty flex-col-reverse md:mt-32">
+      {news.map((item) => (
+	  		<NewsItem {...item} />
+	  	  ))}
+    </div>
   </div>
+
 </BaseLayout>

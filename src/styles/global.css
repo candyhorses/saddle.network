@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6, p {
 .notice {
     position: relative;
     z-index: 1;
-    left: -32px;
+    left: -96px;
     top: 20px;
     background: rgb(54,69,44);
     background: linear-gradient(304deg, rgba(54,69,44,1) 0%, rgba(76,97,66,1) 29%, rgba(42,63,41,1) 100%);

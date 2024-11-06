@@ -1,0 +1,10 @@
+---
+const { xenia } = Astro.props;
+const { dn42 } = Astro.props;
+---
+
+<h1 class="text-xl font-bold sm:font-normal sm:text-3xl md:text-4xl istok-web-regular text-gray-400 mb-4 pl-4">
+    <a href="/"><span class="text-blue-900">saddle</span> networks</a>
+    {xenia && <span class="text-green-400">xenia</span>}
+    {dn42 && <span class="text-blue-400">dn42</span>}
+</h1>
