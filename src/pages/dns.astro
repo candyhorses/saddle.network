@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+import RightMenu from '../components/RightMenu.astro';
+---
+
+<BaseLayout>
+  <div class="p-8 mr-0 ml-0 md:mr-8 md:ml-8 sm:mr-4 sm:ml-4 lg:mr-24 lg:ml-24 relative">
+    <Logo />
+    <div class="text-right md:absolute top-10 right-10">
+      <RightMenu />
+    </div>
+    <div class="text-pretty md:mt-32">
+        <div class="bg-[#34384E] mx-auto rounded-2xl shadow-lg max-w-sm p-6 w-full">
+          <!-- Title -->
+          <h2 class="text-white font-bold text-xl text-center mb-6">Saddle Networks DNS</h2>
+      
+          <!-- DNS IP Blocks -->
+          <div class="space-y-4 mb-6">
+            <div class="bg-[#232636] rounded-lg p-4 shadow-inner text-center">
+              <span class="text-[#80849A] font-bold text-lg">128.254.224.53</span>
+            </div>
+            <div class="bg-[#232636] rounded-lg p-4 shadow-inner text-center">
+              <span class="text-[#80849A] font-bold text-lg">128.254.224.54</span>
+            </div>
+          </div>
+      
+          <!-- Feature List -->
+          <ul class="text-[#80849A] font-bold space-y-3">
+            <li class="flex items-center">
+              <span class="mr-2">•</span> No Tracking or Logs
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span> No Request Forwarding
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span> <a class="underline text-gray-200" href="https://furry.domains">https://furry.domains/ </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>
