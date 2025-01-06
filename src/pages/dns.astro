@@ -8,37 +8,52 @@ import RightMenu from '../components/RightMenu.astro';
 <BaseLayout>
   <div class="p-8 mr-0 ml-0 md:mr-8 md:ml-8 sm:mr-4 sm:ml-4 lg:mr-24 lg:ml-24 relative">
     <Logo />
+    <div class="ml-5 text-lg istok-web-regular text-gray-700">
+      <span style="" class="md:text-3xl text-xl font-bold text-gray-400 mr-2">⤷</span>
+      <span style="" class="text-gray-300 md:text-2xl text-sm mt-1 md:mt-5 font-bold md:font-normal">Anycast DNS Servers</span>
+    </div>
     <div class="text-right md:absolute top-10 right-10">
       <RightMenu />
     </div>
-    <div class="text-pretty md:mt-32">
-        <div class="bg-[#34384E] mx-auto rounded-2xl shadow-lg max-w-sm p-6 w-full">
-          <!-- Title -->
-          <h2 class="text-white font-bold text-xl text-center mb-6">Saddle Networks DNS</h2>
-      
-          <!-- DNS IP Blocks -->
-          <div class="space-y-4 mb-6">
-            <div class="bg-[#232636] rounded-lg p-4 shadow-inner text-center">
-              <span class="text-[#80849A] font-bold text-lg">128.254.224.53</span>
+    <div class="text-pretty mt-10 md:mt-32">
+      <div class="relative z-10 mx-auto mb-10 max-w-4xl text-center text-gray-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+          <div class="bg-gray-900 text-center p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-4 text-gray-400 inline-block">Saddle Networks DNS Servers</h3>
+            <ul class="text-[#80849A] text-gray-300 mb-7 font-bold space-y-3">
+              <li class="flex items-center">
+                <span class="mr-2">•</span> No Tracking or Logs
+              </li>
+              <li class="flex items-center">
+                <span class="mr-2">•</span> No Request Forwarding
+              </li>
+              <li class="flex items-center">
+                <span class="mr-2">•</span> <a class="underline text-gray-200" href="https://furry.domains">https://furry.domains/</a>
+              </li>
+            </ul>
+            <div class="p-0.5 w-full mr-14 max-w-4xl space-x-4 rounded-lg bg-gray-600 shadow-inner">
+              <p id="domain-input" class="p-2 border w-full border-gray-600 rounded-lg bg-gray-900 text-white placeholder-gray-400 text-2xl font-bold flex-grow z-10 relative">128.254.224.53</p>
             </div>
-            <div class="bg-[#232636] rounded-lg p-4 shadow-inner text-center">
-              <span class="text-[#80849A] font-bold text-lg">128.254.224.54</span>
+            <div class="p-0.5 mt-4 w-full mr-14 max-w-4xl space-x-4 rounded-lg bg-gray-600 shadow-inner">
+              <p id="domain-input" class="p-2 border w-full border-gray-600 rounded-lg bg-gray-900 text-white placeholder-gray-400 text-2xl font-bold flex-grow z-10 relative">128.254.224.54</p>
             </div>
           </div>
-      
-          <!-- Feature List -->
-          <ul class="text-[#80849A] font-bold space-y-3">
-            <li class="flex items-center">
-              <span class="mr-2">•</span> No Tracking or Logs
-            </li>
-            <li class="flex items-center">
-              <span class="mr-2">•</span> No Request Forwarding
-            </li>
-            <li class="flex items-center">
-              <span class="mr-2">•</span> <a class="underline text-gray-200" href="https://furry.domains">https://furry.domains/ </a>
-            </li>
-          </ul>
+          <div class="p-4 rounded-lg shadow-lg">
+            <p class="text-gray-300">Our DNS servers are built with speed, privacy, and security in mind. Using robust Anycast DNS technology, we ensure ultra-low latency and high availability, no matter where you connect from.</p>
+            <ul class="text-[#80849A] mt-4 text-gray-300 mb-7 list-disc font-normal space-y-3">
+              <li class="text-left">
+                <span class="font-bold">Privacy:</span> We don't track or log your queries. Your browsing history stays your business.
+              </li>
+              <li class="text-left">
+                <span class="font-bold">Direct Resolution:</span> No request forwarding means faster lookups, reduced points of failure, and increased privacy.
+              </li>
+              <li class="text-left">
+                <span class="font-bold"><a class="underline text-gray-200" href="https://furry.domains">furry.domains</a> Support:</span> Compatible with .fur domains, fostering a dedicated space for furries online
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
       </div>
     </div>
   </div>

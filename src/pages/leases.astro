@@ -3,21 +3,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LeaseCard from '../components/LeaseCard.astro';
 import Logo from '../components/Logo.astro';
 import LeaseMenu from '../components/LeaseMenu.astro';
+import RightMenu from '../components/RightMenu.astro';
 import '../styles/global.css';
 
 const leases = [
   {
-    cidr: 'Check back often for more ranges!',
-    price: 'Regular rates are $100/mo or $1100/yr',
+    cidr: '/24 of IPv4 + /48 IPv6',
+    price: '$133/mo billed annually ($160/mo billed monthly)',
     description: [''],
-    promotion: null,
-  },
+    promotion: true,
+  }
 ];
 ---
 <BaseLayout>
   <div class="p-8 mr-0 ml-0 md:mr-8 md:ml-8 sm:mr-4 sm:ml-4 lg:mr-24 lg:ml-24 relative">
     <Logo />
-    <div class="text-right md:absolute top-10 right-10">
+    <div class="ml-5 text-lg istok-web-regular text-gray-700">
+      <span style="" class="md:text-3xl text-xl font-bold text-gray-400 mr-2">⤷</span>
+      <span style="" class="text-gray-300 md:text-2xl text-sm mt-1 md:mt-5 font-bold md:font-normal">IP Leases</span>
+    </div>
+    <div class="text-right mt-2 md:mt-0 md:absolute top-10 right-10">
       <LeaseMenu />
     </div>
     <div class="mt-24">
@@ -25,5 +30,6 @@ const leases = [
 	  		<LeaseCard {...lease} />
 	  	  ))}
 	  </div>
+    <span style="" class="text-gray-300 md:text-2xl text-sm mt-1 md:mt-5 font-bold md:font-normal">Reach out to <a class="text-white font-bold hover:underline" href="mailto:leasing@saddle.network">leasing@saddle.network</a>.</span>
   </div>
 </BaseLayout>
